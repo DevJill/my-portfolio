@@ -125,7 +125,7 @@ body {
 	transition: 0.5s ease-in;
 }
 
-.about-me-div h2 {
+body h2 {
 	width: 40%;
 	margin: 20px auto auto auto;
 	font-size: large;
@@ -142,6 +142,61 @@ body {
 
 .about-me-div p:first-of-type {
 	padding-bottom: 20px;
+}
+
+.project-div {
+	margin: 125px auto;
+	width: 60%;
+}
+
+.project-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.project {
+	opacity: 0;
+	padding: 50px;
+	height: 100px;
+
+	-webkit-transition: 0.5s ease-in;
+	-moz-transition: 0.5s ease-in;
+	transition: 0.5s ease-in;
+}
+
+.project h2 {
+	padding-top: 20px;
+}
+
+/* .project-grid div:first-of-type {
+	background-color: green;
+}
+
+.project-grid div:last-of-type {
+	background-color: orange;
+} */
+
+.project1,
+.project2 {
+	cursor: pointer;
+	padding: 20px;
+	height: 350px;
+	background-color: #f1d7c7d7;
+	border-radius: 40px;
+}
+
+/*-------------------------------------------------------------------*/
+
+.fade-in-div-projects {
+	opacity: 0.5;
+
+	-webkit-transition: 0.3s ease-in;
+	-moz-transition: 0.3s ease-in;
+	transition: 0.3s ease-in;
+}
+
+.fade-in-div-projects:hover {
+	opacity: 1;
 }
 
 .fade-in-div {

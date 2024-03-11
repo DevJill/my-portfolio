@@ -66,6 +66,7 @@ function Home() {
 					</div>
 				</div>
 				<AboutMe />
+				<Projects />
 			</div>
 		</div>
 	);
@@ -83,7 +84,7 @@ function Skills() {
 
 function AboutMe() {
 	const [scroll, setScroll] = useState(false);
-	console.log(scroll);
+	console.log(window.scrollY);
 
 	useEffect(() => {
 		window.addEventListener("scroll", () => {
@@ -113,6 +114,39 @@ function AboutMe() {
 				includes me having a successful career in web development working on the
 				front lines of new and exciting technologies.
 			</p>
+		</div>
+	);
+}
+
+function Projects() {
+	const [scrollDiv1, setScrollDiv1] = useState(false);
+	const [scrollDiv2, setScrollDiv2] = useState(false);
+
+	useEffect(() => {
+		window.addEventListener("scroll", () => {
+			window.scrollY > 550 ? setScrollDiv1(true) : setScrollDiv1(false);
+			window.scrollY > 650 ? setScrollDiv2(true) : setScrollDiv2(false);
+		});
+	}, []);
+
+	return (
+		<div className="project-div">
+			<div className="project-grid">
+				<div
+					className={scrollDiv1 ? "project fade-in-div-projects" : "project"}
+				>
+					<div className="project1">
+						<h2>Project One</h2>
+					</div>
+				</div>
+				<div
+					className={scrollDiv2 ? "project fade-in-div-projects" : "project"}
+				>
+					<div className="project2">
+						<h2>Project Two</h2>
+					</div>
+				</div>
+			</div>
 		</div>
 	);
 }
