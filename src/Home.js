@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import Jill from "./img/dill.JPG";
+import BBargs from "./img/BrissyBargains.PNG";
+import VVap from "./img/VerdaVap.PNG";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 
@@ -45,24 +47,28 @@ function Home() {
 					<div className="profile-about-me">
 						<p>Jillian Norrie - Junior Frontend Developer</p>
 						<Skills />
-						<FaLinkedin
-							className="linkedin-icon"
-							size="25"
-							style={{
-								margin: "0 10px",
-								cursor: "pointer",
-								transition: "0.2s ease-in",
-							}}
-						/>
-						<FaGithub
-							className="github-icon"
-							size="25"
-							style={{
-								margin: "0 10px",
-								cursor: "pointer",
-								transition: "0.2s ease-in",
-							}}
-						/>
+						<a href="https://linkedin.com/in/jillian-norrie-8b16621b8">
+							<FaLinkedin
+								className="linkedin-icon"
+								size="25"
+								style={{
+									margin: "0 10px",
+									cursor: "pointer",
+									transition: "0.2s ease-in",
+								}}
+							/>
+						</a>
+						<a href="https://github.com/DevJill">
+							<FaGithub
+								className="github-icon"
+								size="25"
+								style={{
+									margin: "0 10px",
+									cursor: "pointer",
+									transition: "0.2s ease-in",
+								}}
+							/>
+						</a>
 					</div>
 				</div>
 				<AboutMe />
@@ -124,8 +130,8 @@ function Projects() {
 
 	useEffect(() => {
 		window.addEventListener("scroll", () => {
-			window.scrollY > 550 ? setScrollDiv1(true) : setScrollDiv1(false);
-			window.scrollY > 650 ? setScrollDiv2(true) : setScrollDiv2(false);
+			window.scrollY > 575 ? setScrollDiv1(true) : setScrollDiv1(false);
+			window.scrollY > 675 ? setScrollDiv2(true) : setScrollDiv2(false);
 		});
 	}, []);
 
@@ -135,16 +141,52 @@ function Projects() {
 				<div
 					className={scrollDiv1 ? "project fade-in-div-projects" : "project"}
 				>
-					<div className="project1">
-						<h2>Project One</h2>
-					</div>
+					<a href="https://brissybargains.com">
+						<div className="project1">
+							<h2>Project One</h2>
+							<img
+								className="bbargs-img"
+								src={BBargs}
+								alt="BrissyBargains website screencap"
+							/>
+							<p>
+								<i>Brissy Bargains</i> is my first passion project that I pushed
+								to deployment. I wanted this project to be both meaningful and a
+								challenge, so I decided to create a community-centric website
+								using only vanilla JavaScript. This was also my first time using
+								the leaflet API and pushing an API to deployment in general. I
+								found the experience creating this website extremely valuable in
+								learning practical coding skills.
+							</p>
+						</div>
+					</a>
 				</div>
 				<div
 					className={scrollDiv2 ? "project fade-in-div-projects" : "project"}
 				>
-					<div className="project2">
-						<h2>Project Two</h2>
-					</div>
+					<a href="https://verdavap.com">
+						<div className="project2">
+							<h2>Project Two</h2>
+							<img
+								className="vvap-img"
+								src={VVap}
+								alt="VerdaVap website screencap"
+							/>
+							<p>
+								<i>VerdaVap</i> is a freelance project that I created from
+								scratch. I was the only developer hired for this job, so I was
+								in charge of the frontend and backend code. I was also given
+								complete creative liberty for the website design, apart from the
+								colour palate.
+							</p>
+							<p>
+								Creating this website challenged me on many levels. In the end,
+								I gained significant knowledge about the React library, using
+								Nodejs to create AWS Lambda functions, correctly configuring AWS
+								API Gateways, etc.
+							</p>
+						</div>
+					</a>
 				</div>
 			</div>
 		</div>
