@@ -107,7 +107,8 @@ body {
 }
 
 .linkedin-icon,
-.github-icon {
+.github-icon,
+.contact-icon {
 	color: black;
 }
 
@@ -122,7 +123,7 @@ body {
 	padding: 20px 0 40px 0;
 	border-radius: 40px;
 	margin: 125px auto 0 auto;
-	background-color: #ecdaceb2;
+	background-color: rgba(240, 211, 192, 0.5);
 	opacity: 0;
 
 	-webkit-transition: 0.5s ease-in;
@@ -140,7 +141,8 @@ body h2 {
 
 .about-me-div p,
 .project1 p,
-.project2 p {
+.project2 p,
+.contact-me p {
 	margin: auto;
 	width: 85%;
 	font-weight: 400;
@@ -152,7 +154,8 @@ body h2 {
 }
 
 .project-div {
-	margin: 125px auto;
+	height: 820px;
+	margin: 125px auto 0 auto;
 	width: 75%;
 }
 
@@ -174,8 +177,10 @@ body h2 {
 	transition: 0.5s ease-in;
 }
 
-.project a {
+.project a,
+.contact-me a {
 	text-decoration: none;
+	cursor: pointer;
 }
 
 .project h2 {
@@ -195,19 +200,42 @@ body h2 {
 	cursor: pointer;
 	padding: 20px;
 	height: 775px;
-	background-color: #f1d7c7d7;
+	background-color: rgba(236, 191, 161, 0.5);
 	border-radius: 40px;
 	color: black;
 }
 
 .bbargs-img,
 .vvap-img {
+	border-width: 2px;
+	border-style: solid;
+	border-color: #e4c3ada1;
 	border-radius: 40px;
 	margin-bottom: 20px;
 }
 
 .project2 p:first-of-type {
 	padding-bottom: 20px;
+}
+
+.contact-me {
+	width: 20%;
+	margin: 125px auto 0 auto;
+	padding: 20px 20px 45px 20px;
+	text-align: center;
+	background-color: rgba(236, 179, 141, 0.5);
+	border-radius: 40px;
+	opacity: 0;
+
+	transform: translateY(100%);
+	transition: transform 2s, opacity 1s;
+}
+
+.contact-me a {
+	color: rgb(0, 0, 0);
+	border-width: 0 0 1px 0;
+	border-style: solid;
+	border-color: rgba(0, 0, 0, 0.158);
 }
 
 /*-------------------------------------------------------------------*/
@@ -223,6 +251,11 @@ body h2 {
 
 .fade-in-div-projects:hover {
 	opacity: 1;
+}
+
+.fade-in-contact {
+	opacity: 1;
+	transform: translateY(0);
 }
 
 .fade-in-div {

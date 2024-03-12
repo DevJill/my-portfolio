@@ -4,6 +4,8 @@ import BBargs from "./img/BrissyBargains.PNG";
 import VVap from "./img/VerdaVap.PNG";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import { FaPhone } from "react-icons/fa";
+import { MdOutlineEmail } from "react-icons/md";
 
 const skillArray = ["HTML5", "CSS3", "ReactJs", "NodeJs", "AWS Basics"];
 
@@ -73,6 +75,7 @@ function Home() {
 				</div>
 				<AboutMe />
 				<Projects />
+				<ContactMe />
 			</div>
 		</div>
 	);
@@ -189,6 +192,51 @@ function Projects() {
 					</a>
 				</div>
 			</div>
+		</div>
+	);
+}
+
+function ContactMe() {
+	const [scroll, setScroll] = useState(false);
+	console.log(window.scrollY);
+
+	useEffect(() => {
+		window.addEventListener("scroll", () => {
+			window.scrollY > 1350 ? setScroll(true) : setScroll(false);
+		});
+	}, []);
+
+	return (
+		<div className={scroll ? "contact-me fade-in-contact" : "contact-me"}>
+			<h2>Contact Me</h2>
+			<span style={{ display: "block" }}>
+				<FaPhone
+					className="contact-icon"
+					size="20"
+					style={{
+						display: "inline",
+						marginBottom: "-4px",
+						marginRight: "10px",
+					}}
+				/>
+				<a href="tel:+610406608397">
+					<p style={{ display: "inline" }}>+61 0406 608 397</p>
+				</a>
+			</span>
+			<span style={{ display: "block" }}>
+				<MdOutlineEmail
+					className="contact-icon"
+					size="25"
+					style={{
+						display: "inline",
+						marginBottom: "-10px",
+						marginRight: "10px",
+					}}
+				/>
+				<a href="mailto: jillian.business@outlook.com">
+					<p style={{ display: "inline" }}>jillian.business@outlook.com</p>
+				</a>
+			</span>
 		</div>
 	);
 }
