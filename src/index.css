@@ -240,6 +240,197 @@ body h2 {
 
 /*-------------------------------------------------------------------*/
 
+@media only screen and (max-width: 600px) {
+	.body-div {
+		height: 3800px;
+		padding: 100px 20px;
+	}
+
+	.click-to-enter-div {
+		position: absolute;
+		width: 150px;
+		height: 50px;
+		top: 300px;
+		left: 50%;
+		transform: translate(-50%, 0);
+	}
+
+	.main-profile-div {
+		cursor: default;
+		font-family: "Noto Sans Thai", sans-serif;
+		font-weight: 700;
+		letter-spacing: 1px;
+		pointer-events: none;
+		opacity: 0;
+		justify-content: center;
+
+		-webkit-transition: 0.9s ease-in;
+		-moz-transition: 0.9s ease-in;
+		transition: 0.9s ease-in;
+	}
+
+	.profile-grid {
+		margin: auto;
+		background-color: #f7ede6;
+		border-radius: 60px;
+		width: 100%;
+		height: fit-content;
+		display: grid;
+		grid-template-rows: 55% 45%;
+	}
+
+	.profile-grid img {
+		padding: 40px 20px;
+		width: 275px;
+		margin: auto;
+		border-radius: 30%;
+	}
+
+	.profile-about-me {
+		text-align: center;
+		padding: 0 40px;
+	}
+
+	.skills-ul {
+		max-width: 90%;
+		margin: 20px auto 50px auto;
+		padding: 0;
+		list-style-type: none;
+	}
+
+	.skills-ul li {
+		font-weight: 400;
+		display: inline;
+		margin: 0 10px;
+		padding: 5px;
+		border-radius: 5px;
+	}
+
+	.skill-span2 {
+		margin-top: 30px;
+	}
+
+	.skill-span2 li:first-of-type {
+		background-color: rgba(170, 255, 196, 0.753);
+	}
+
+	.skill-span2 li:last-of-type {
+		background-color: rgba(168, 235, 255, 0.534);
+	}
+
+	.about-me-div {
+		width: 100%;
+		height: fit-content;
+		padding: 20px 0 45px 0;
+		border-radius: 40px;
+		margin: 125px auto 0 auto;
+		background-color: rgba(236, 205, 183, 0.5);
+		opacity: 0;
+
+		-webkit-transition: 0.5s ease-in;
+		-moz-transition: 0.5s ease-in;
+		transition: 0.5s ease-in;
+	}
+
+	body h2 {
+		width: 40%;
+		margin: 20px auto auto auto;
+		font-size: large;
+		font-weight: 700;
+		padding-bottom: 10px;
+	}
+
+	.about-me-div p,
+	.project1 p,
+	.project2 p,
+	.contact-me p {
+		margin: auto;
+		width: 85%;
+		font-weight: 400;
+		font-size: small;
+	}
+
+	.about-me-div p:first-of-type {
+		padding-bottom: 20px;
+	}
+
+	.project-div {
+		height: 820px;
+		margin: 125px auto 0 auto;
+		width: 90%;
+	}
+
+	.project-grid {
+		display: block;
+	}
+
+	.project {
+		opacity: 0;
+		padding: 0;
+		height: fit-content;
+		text-align: center;
+		pointer-events: none;
+
+		-webkit-transition: 0.5s ease-in;
+		-moz-transition: 0.5s ease-in;
+		transition: 0.5s ease-in;
+	}
+
+	.project a,
+	.contact-me a {
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+	.project h2 {
+		padding-top: 20px;
+	}
+
+	.project1,
+	.project2 {
+		cursor: pointer;
+		padding: 20px;
+		height: 775px;
+		background-color: rgba(236, 191, 161, 0.5);
+		border-radius: 40px;
+		color: black;
+	}
+
+	.bbargs-img,
+	.vvap-img {
+		width: 100%;
+		border-width: 2px;
+		border-style: solid;
+		border-color: #e4c3ada1;
+		border-radius: 40px;
+		margin-bottom: 20px;
+	}
+
+	.project2 p:first-of-type {
+		padding-bottom: 20px;
+	}
+
+	.contact-me {
+		width: 20%;
+		margin: 125px auto 0 auto;
+		padding: 20px 20px 45px 20px;
+		text-align: center;
+		background-color: rgba(236, 179, 141, 0.5);
+		border-radius: 40px;
+		opacity: 0;
+
+		transform: translateY(100%);
+		transition: transform 2s, opacity 1s;
+	}
+
+	.contact-me a {
+		color: rgb(0, 0, 0);
+		border-width: 0 0 1px 0;
+		border-style: solid;
+		border-color: rgba(0, 0, 0, 0.158);
+	}
+}
+
 .fade-in-div-projects {
 	opacity: 0.5;
 	pointer-events: all;

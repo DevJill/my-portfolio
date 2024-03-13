@@ -8,6 +8,8 @@ import { FaPhone } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 
 const skillArray = ["HTML5", "CSS3", "ReactJs", "NodeJs", "AWS Basics"];
+const skillArray1 = ["HTML5", "CSS3", "ReactJs"];
+const skillArray2 = ["NodeJs", "AWS Basics"];
 
 function Home() {
 	const [opacity, setOpacity] = useState(true);
@@ -47,7 +49,14 @@ function Home() {
 				<div className="profile-grid">
 					<img src={Jill} alt="profile pic of Jill" />
 					<div className="profile-about-me">
-						<p>Jillian Norrie - Junior Frontend Developer</p>
+						{window.innerWidth > 600 ? (
+							<p>Jillian Norrie - Junior Frontend Developer</p>
+						) : (
+							<span>
+								<p>Jillian Norrie</p>
+								<p>Junior Frontend Developer</p>
+							</span>
+						)}
 						<Skills />
 						<a href="https://linkedin.com/in/jillian-norrie-8b16621b8">
 							<FaLinkedin
@@ -84,16 +93,28 @@ function Home() {
 function Skills() {
 	return (
 		<ul className="skills-ul">
-			{skillArray.map((skills) => {
-				return <li>{skills}</li>;
-			})}
+			<span style={{ display: "block" }}>
+				{window.innerWidth > 600
+					? skillArray.map((skills) => {
+							return <li>{skills}</li>;
+					  })
+					: skillArray1.map((skills) => {
+							return <li style={{ display: "inline" }}>{skills}</li>;
+					  })}
+			</span>
+			<span className="skill-span2" style={{ display: "block" }}>
+				{window.innerWidth < 600
+					? skillArray2.map((skills) => {
+							return <li style={{ display: "inline" }}>{skills}</li>;
+					  })
+					: ""}
+			</span>
 		</ul>
 	);
 }
 
 function AboutMe() {
 	const [scroll, setScroll] = useState(false);
-	console.log(window.scrollY);
 
 	useEffect(() => {
 		window.addEventListener("scroll", () => {
@@ -198,7 +219,6 @@ function Projects() {
 
 function ContactMe() {
 	const [scroll, setScroll] = useState(false);
-	console.log(window.scrollY);
 
 	useEffect(() => {
 		window.addEventListener("scroll", () => {
