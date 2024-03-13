@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Jill from "./img/dill.JPG";
-import BBargs from "./img/BrissyBargains.PNG";
-import VVap from "./img/VerdaVap.PNG";
+import BBargs from "./img/BrissyBargains.jpg";
+import VVap from "./img/VerdaVap.jpg";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa";
