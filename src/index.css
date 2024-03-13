@@ -240,9 +240,22 @@ body h2 {
 
 /*-------------------------------------------------------------------*/
 
+.fade-in-div-projects {
+	opacity: 0.5;
+	pointer-events: all;
+
+	-webkit-transition: 0.3s ease-in;
+	-moz-transition: 0.3s ease-in;
+	transition: 0.3s ease-in;
+}
+
+.fade-in-div-projects:hover {
+	opacity: 1;
+}
+
 @media only screen and (max-width: 600px) {
 	.body-div {
-		height: 3800px;
+		height: 3500px;
 		padding: 100px 20px;
 	}
 
@@ -256,6 +269,7 @@ body h2 {
 	}
 
 	.main-profile-div {
+		height: 3000px;
 		cursor: default;
 		font-family: "Noto Sans Thai", sans-serif;
 		font-weight: 700;
@@ -355,9 +369,9 @@ body h2 {
 	}
 
 	.project-div {
-		height: 820px;
+		height: 1675px;
 		margin: 125px auto 0 auto;
-		width: 90%;
+		width: 100%;
 	}
 
 	.project-grid {
@@ -365,6 +379,7 @@ body h2 {
 	}
 
 	.project {
+		margin: 50px 0;
 		opacity: 0;
 		padding: 0;
 		height: fit-content;
@@ -391,7 +406,7 @@ body h2 {
 		cursor: pointer;
 		padding: 20px;
 		height: 775px;
-		background-color: rgba(236, 191, 161, 0.5);
+		background-color: rgba(236, 191, 161, 0.404);
 		border-radius: 40px;
 		color: black;
 	}
@@ -411,7 +426,7 @@ body h2 {
 	}
 
 	.contact-me {
-		width: 20%;
+		width: 80%;
 		margin: 125px auto 0 auto;
 		padding: 20px 20px 45px 20px;
 		text-align: center;
@@ -429,19 +444,17 @@ body h2 {
 		border-style: solid;
 		border-color: rgba(0, 0, 0, 0.158);
 	}
-}
 
-.fade-in-div-projects {
-	opacity: 0.5;
-	pointer-events: all;
+	/* --------------------------------------------------------------- */
 
-	-webkit-transition: 0.3s ease-in;
-	-moz-transition: 0.3s ease-in;
-	transition: 0.3s ease-in;
-}
+	.fade-in-div-projects {
+		opacity: 1;
+		pointer-events: all;
 
-.fade-in-div-projects:hover {
-	opacity: 1;
+		-webkit-transition: 0.3s ease-in;
+		-moz-transition: 0.3s ease-in;
+		transition: 0.3s ease-in;
+	}
 }
 
 .fade-in-contact {

@@ -118,7 +118,12 @@ function AboutMe() {
 
 	useEffect(() => {
 		window.addEventListener("scroll", () => {
-			window.scrollY > 80 ? setScroll(true) : setScroll(false);
+			window.scrollY > 80 && window.innerWidth > 600
+				? setScroll(true)
+				: setScroll(false);
+			window.scrollY > 150 && window.innerWidth < 600
+				? setScroll(true)
+				: setScroll(false);
 		});
 	}, []);
 
@@ -154,8 +159,18 @@ function Projects() {
 
 	useEffect(() => {
 		window.addEventListener("scroll", () => {
-			window.scrollY > 575 ? setScrollDiv1(true) : setScrollDiv1(false);
-			window.scrollY > 675 ? setScrollDiv2(true) : setScrollDiv2(false);
+			window.scrollY > 575 && window.innerWidth > 600
+				? setScrollDiv1(true)
+				: setScrollDiv1(false);
+			window.scrollY > 800 && window.innerWidth < 600
+				? setScrollDiv1(true)
+				: setScrollDiv1(false);
+			window.scrollY > 675 && window.innerWidth > 600
+				? setScrollDiv2(true)
+				: setScrollDiv2(false);
+			window.scrollY > 1600 && window.innerWidth < 600
+				? setScrollDiv2(true)
+				: setScrollDiv2(false);
 		});
 	}, []);
 
@@ -222,7 +237,12 @@ function ContactMe() {
 
 	useEffect(() => {
 		window.addEventListener("scroll", () => {
-			window.scrollY > 1350 ? setScroll(true) : setScroll(false);
+			window.scrollY > 1350 && window.innerWidth > 600
+				? setScroll(true)
+				: setScroll(false);
+			window.scrollY > 2600 && window.innerWidth < 600
+				? setScroll(true)
+				: setScroll(false);
 		});
 	}, []);
 
