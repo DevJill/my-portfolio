@@ -118,14 +118,21 @@ function AboutMe() {
 
 	useEffect(() => {
 		window.addEventListener("scroll", () => {
-			window.scrollY > 80 && window.innerWidth > 600
-				? setScroll(true)
-				: setScroll(false);
-			window.scrollY > 250 && window.innerWidth < 600
-				? setScroll(true)
-				: setScroll(false);
+			checkWidth();
 		});
 	}, []);
+
+	function checkWidth() {
+		if (window.scrollY > 80 && window.innerWidth > 600) {
+			setScroll(true);
+		} else if (window.scrollY < 80 && window.innerWidth > 600) {
+			setScroll(false);
+		} else if (window.scrollY > 250 && window.innerWidth < 600) {
+			setScroll(true);
+		} else if (window.scrollY < 250 && window.innerWidth < 600) {
+			setScroll(false);
+		}
+	}
 
 	return (
 		<div
@@ -159,20 +166,37 @@ function Projects() {
 
 	useEffect(() => {
 		window.addEventListener("scroll", () => {
-			window.scrollY > 575 && window.innerWidth > 600
-				? setScrollDiv1(true)
-				: setScrollDiv1(false);
-			window.scrollY > 900 && window.innerWidth < 600
-				? setScrollDiv1(true)
-				: setScrollDiv1(false);
-			window.scrollY > 675 && window.innerWidth > 600
-				? setScrollDiv2(true)
-				: setScrollDiv2(false);
-			window.scrollY > 1700 && window.innerWidth < 600
-				? setScrollDiv2(true)
-				: setScrollDiv2(false);
+			checkWidthDiv1();
+			checkWidthDiv2();
 		});
 	}, []);
+
+	function checkWidthDiv1() {
+		if (window.scrollY > 575 && window.innerWidth > 600) {
+			setScrollDiv1(true);
+		} else if (window.scrollY < 575 && window.innerWidth > 600) {
+			setScrollDiv1(false);
+			// hi
+		} else if (window.scrollY > 900 && window.innerWidth < 600) {
+			setScrollDiv1(true);
+		} else if (window.scrollY < 900 && window.innerWidth < 600) {
+			setScrollDiv1(false);
+			// hi
+		}
+	}
+
+	function checkWidthDiv2() {
+		if (window.scrollY > 675 && window.innerWidth > 600) {
+			setScrollDiv2(true);
+		} else if (window.scrollY < 675 && window.innerWidth > 600) {
+			setScrollDiv2(false);
+			// hi
+		} else if (window.scrollY > 1700 && window.innerWidth < 600) {
+			setScrollDiv2(true);
+		} else if (window.scrollY < 1700 && window.innerWidth < 600) {
+			setScrollDiv2(false);
+		}
+	}
 
 	return (
 		<div className="project-div">
@@ -237,14 +261,21 @@ function ContactMe() {
 
 	useEffect(() => {
 		window.addEventListener("scroll", () => {
-			window.scrollY > 1350 && window.innerWidth > 600
-				? setScroll(true)
-				: setScroll(false);
-			window.scrollY > 2600 && window.innerWidth < 600
-				? setScroll(true)
-				: setScroll(false);
+			checkWidth();
 		});
 	}, []);
+
+	function checkWidth() {
+		if (window.scrollY > 1350 && window.innerWidth > 600) {
+			setScroll(true);
+		} else if (window.scrollY < 1350 && window.innerWidth > 600) {
+			setScroll(false);
+		} else if (window.scrollY > 2600 && window.innerWidth < 600) {
+			setScroll(true);
+		} else if (window.scrollY < 2600 && window.innerWidth < 600) {
+			setScroll(false);
+		}
+	}
 
 	return (
 		<div className={scroll ? "contact-me fade-in-contact" : "contact-me"}>

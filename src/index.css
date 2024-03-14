@@ -207,6 +207,7 @@ body h2 {
 
 .bbargs-img,
 .vvap-img {
+	width: 350px;
 	border-width: 2px;
 	border-style: solid;
 	border-color: #e4c3ada1;
